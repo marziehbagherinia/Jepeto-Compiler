@@ -1,0 +1,19 @@
+ main :  f(b = "str", a = true);
+
+func f(a, b) : {
+    g(a, b);
+    if (a) :
+        return void;
+    else :
+        return a and b;
+}
+
+func g(arg1, arg2) : {
+    print(f(arg1 + arg2 * arg1, "str2"));
+    return arg1;
+}
+
+
+func noVisit(a, b) : {
+    return 1 + true;
+}
